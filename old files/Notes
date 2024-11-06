@@ -1,0 +1,48 @@
+Generating " Clean  " peroidic signal 
+
+SIGNAL ~- Interger kill
+kill -l 
+to list the known signals
+
+a signal can be derouted or not 
+derouted or not 
+derouted - 
+not - sigkill 
+
+write a program that prints "Hello" each time it recieves the SIGUSR signal
+
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<signal.h>
+/* declaration*/
+/*Signal handler*/ 
+void signalhandler(int signal)
+{
+    if (signal == SIGUSR1)
+    {
+        printf("HELLO!\n");
+    };
+}
+int void main(void)
+{
+    struct sigaction sa, sa_old;
+    sigset_t mask;
+
+    sigemptyset(&mask);
+    mem set(&sa,0,sizeof(sigaction));
+    mem set(&sa_old,0,sizeof(sigaction));
+    sa.sa_handler = signalhandler;
+    sa.sa_mask = mask 
+    sigaction(SIGUSR1,&sa,&sa_old);
+    do
+    {
+        pause();
+    } while(1);
+    return(0);     
+}
+
+
+kill -s SIGUSR1 target_pid
+ps aux
+ps a

@@ -1,0 +1,9 @@
+Raspberry Pi 4 
+Camera Module V2.1 
+
+Linux raspberrypi 6.6.51+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.6.51-1+rpt3 (2024-10-08) aarch64 GNU/Linux
+Pyhton 3.11.2
+OpenCV 4.6.0
+ctypes 1.1.0
+Numpy 1.24.2
+picamera2
